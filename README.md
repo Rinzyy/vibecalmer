@@ -6,7 +6,7 @@ VibeCalmer is an open-source meditation timer built with Next.js that helps you 
 
 - **Simple, Distraction-Free Interface**: Focus on your practice with a clean, minimalist design
 - **Progress Visualization**: Track your meditation session with a visual progress ring
-- **Customizable Audio**: Choose between ambient sounds, HRV-optimized breathing music, or silence
+- **Customizable Audio**: Choose between ambient sounds, or silence
 - **Bell Notifications**: Gentle bell sounds mark the beginning and end of your session
 - **Dark/Light Mode**: Toggle between themes based on your preference
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
