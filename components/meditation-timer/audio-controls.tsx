@@ -1,6 +1,6 @@
 "use client"
 
-import { VolumeX, Waves, Music } from "lucide-react"
+import { VolumeX, Music } from "lucide-react"
 import { AudioMode } from "../../hooks/useAudio"
 
 interface AudioControlsProps {
