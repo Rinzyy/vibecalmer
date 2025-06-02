@@ -54,9 +54,8 @@ VibeCalmer is an open-source meditation timer built with Next.js that helps you 
 ## Technology Stack
 
 - [Next.js 15](https://nextjs.org/) - React framework
-- [React 19](https://react.dev/) - UI library
 - [TailwindCSS 4](https://tailwindcss.com/) - CSS framework
-- [next-themes](https://github.com/pacocoursey/next-themes) - Theme management
+- [Shadcn](https://ui.shadcn.com/) - UI Library
 - [Lucide React](https://lucide.dev/) - Icon library
 
 ## Deployment
