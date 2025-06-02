@@ -9,7 +9,7 @@ import { RestartButton } from "./meditation-timer/restart-button"
 import { Instructions } from "./meditation-timer/instructions"
 import { ThemeToggle } from "./theme-toggle"
 
-const DEFAULT_MEDITATION_TIME = 300 // 5 minutes in seconds
+const DEFAULT_MEDITATION_TIME = 240 // 4 minutes in seconds
 
 export default function MeditationTimer() {
   const { 
