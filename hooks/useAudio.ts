@@ -23,9 +23,13 @@ const storeAudioMode = (mode: AudioMode): void => {
   }
 }
 
+
+
 export function useAudio({ isRunning, timeLeft }: UseAudioProps) {
   // Initialize with stored preference or default to ambient
   const [audioMode, setAudioMode] = useState<AudioMode>("music2") // Default value until useEffect runs
+  // Fixed volume at 50%
+  const FIXED_VOLUME = 0.5
   
   // Howl audio references
   const bellSoundRef = useRef<Howl | null>(null)
@@ -49,20 +53,20 @@ export function useAudio({ isRunning, timeLeft }: UseAudioProps) {
     // Create Howl instances for each sound
     bellSoundRef.current = new Howl({
       src: ["/audio/bell.mp3"],
-      volume: 1.0,
+      volume: FIXED_VOLUME, // Bell sound always plays at full volume
       preload: true
     })
     
     hrvSoundRef.current = new Howl({
       src: ["/audio/hrv.mp3"],
-      volume: 1.0,
+      volume: FIXED_VOLUME, // Fixed at 50%
       loop: true,
       preload: true
     })
     
     ambientSoundRef.current = new Howl({
       src: ["/audio/ambient.mp3"],
-      volume: 1.0,
+      volume: FIXED_VOLUME, // Fixed at 50%
       loop: true,
       preload: true
     })
@@ -89,10 +93,10 @@ export function useAudio({ isRunning, timeLeft }: UseAudioProps) {
     if (isRunning) {
       // Play the appropriate background audio
       if (audioMode === "music1" && hrvSoundRef.current) {
-        hrvSoundRef.current.volume(1.0) // Reset volume
+        hrvSoundRef.current.volume(FIXED_VOLUME) // Fixed at 50%
         hrvSoundRef.current.play()
       } else if (audioMode === "music2" && ambientSoundRef.current) {
-        ambientSoundRef.current.volume(1.0) // Reset volume
+        ambientSoundRef.current.volume(FIXED_VOLUME) // Fixed at 50%
         ambientSoundRef.current.play()
       }
     }
@@ -107,11 +111,11 @@ export function useAudio({ isRunning, timeLeft }: UseAudioProps) {
     if (timeLeft > 5) {
       fadeOutStartedRef.current = false
       
-      // Make sure volume is reset to full when not in fade-out range
+      // Make sure volume is reset to fixed setting when not in fade-out range
       if (audioMode === "music1" && hrvSoundRef.current) {
-        hrvSoundRef.current.volume(1.0)
+        hrvSoundRef.current.volume(FIXED_VOLUME)
       } else if (audioMode === "music2" && ambientSoundRef.current) {
-        ambientSoundRef.current.volume(1.0)
+        ambientSoundRef.current.volume(FIXED_VOLUME)
       }
     }
     
@@ -123,7 +127,7 @@ export function useAudio({ isRunning, timeLeft }: UseAudioProps) {
       
       if (currentSound && currentSound.playing()) {
         // Use Howler's built-in fade method for smooth fade-out over 5 seconds
-        currentSound.fade(1.0, 0, 5000) // 5000ms = 5 seconds
+        currentSound.fade(FIXED_VOLUME, 0, 5000) // 5000ms = 5 seconds
       }
     }
   }, [isRunning, timeLeft, audioMode])
@@ -141,6 +145,8 @@ export function useAudio({ isRunning, timeLeft }: UseAudioProps) {
     // Store preference in localStorage
     storeAudioMode(mode)
   }, [])
+  
+
 
   return {
     audioMode,

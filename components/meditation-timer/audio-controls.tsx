@@ -58,6 +58,8 @@ export function AudioControls({ audioMode, isRunning, onAudioChange }: AudioCont
           {audioMode === "none" ? "Off" : audioMode === "music1" ? "HRV" : "Ambient"}
         </span>
       </div>
+
+
     </div>
   )
 }
