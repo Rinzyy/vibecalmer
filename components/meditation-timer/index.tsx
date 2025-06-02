@@ -28,7 +28,8 @@ export function MeditationTimer() {
     setAudio, 
     playBellSound 
   } = useAudio({ 
-    isRunning 
+    isRunning,
+    timeLeft
   })
 
   const handleRestart = (e: React.MouseEvent) => {
