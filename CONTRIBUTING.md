@@ -1,6 +1,6 @@
-# Contributing to VibeDown
+# Contributing to VibeCalmer
 
-Thank you for your interest in contributing to VibeDown! We're excited to have you join our community. This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to VibeCalmer! We're excited to have you join our community. This document provides guidelines and instructions for contributing to the project.
 
 ## Code of Conduct
 
@@ -11,8 +11,8 @@ By participating in this project, you agree to abide by our Code of Conduct. Ple
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/yourusername/vibedown.git
-   cd vibedown
+   git clone https://github.com/yourusername/vibecalmer.git
+   cd vibecalmer
    ```
 3. **Set up the development environment**:
    ```bash
@@ -48,7 +48,7 @@ By participating in this project, you agree to abide by our Code of Conduct. Ple
 ## Project Structure
 
 ```
-vibedown/
+vibecalmer/
 ├── app/                  # Next.js app directory
 ├── components/           # React components
 │   ├── meditation-timer/ # Timer-related components
@@ -110,7 +110,7 @@ Before submitting a PR, test your changes:
 
 ## License
 
-By contributing to VibeDown, you agree that your contributions will be licensed under the project's MIT License.
+By contributing to VibeCalmer, you agree that your contributions will be licensed under the project's MIT License.
 
 ## Questions?
 
