@@ -1,8 +1,6 @@
-# VibeDown: Meditation Timer and Mindfulness App
+# VibeCalmer: Meditation Timer and Mindfulness App
 
-VibeDown is an open-source meditation timer built with Next.js that helps you establish a regular mindfulness practice. With a clean, distraction-free interface and customizable audio environments, VibeDown makes it easy to incorporate meditation into your daily routine.
-
-![VibeDown Meditation Timer](public/og-image.png)
+VibeCalmer is an open-source meditation timer built with Next.js that helps you establish a regular mindfulness practice. With a clean, distraction-free interface and customizable audio environments, VibeCalmer makes it easy to incorporate meditation into your daily routine.
 
 ## Features
 
@@ -63,7 +61,7 @@ VibeDown is an open-source meditation timer built with Next.js that helps you es
 
 ## Deployment
 
-VibeDown can be deployed on any platform that supports Next.js applications:
+VibeCalmer can be deployed on any platform that supports Next.js applications:
 
 - [Vercel](https://vercel.com/) (recommended)
 - [Netlify](https://www.netlify.com/)
